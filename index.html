@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>학생들의 급식 건의 사항 시스템</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>학생들의 급식 건의 사항 시스템</h1>
+
+  <section class="suggestion-section">
+    <h2>학교 급식 건의 사항</h2>
+    <input type="text" id="suggestion-input" placeholder="건의 사항을 입력하세요" />
+    <button onclick="addSuggestion()">추가</button>
+    <ul id="suggestion-list"></ul>
+  </section>
+
+  <section class="menu-section">
+    <h2>다음 달에 가장 먹고 싶은 걸 알려주세요!</h2>
+    <div id="menu-cards" class="card-container"></div>
+    <button id="vote-btn" onclick="submitVotes()">투표하기</button>
+  </section>
+
+  <section class="chart-section">
+    <h2>인기 메뉴 Top 5</h2>
+    <canvas id="chart" width="600" height="300"></canvas>
+  </section>
+
+  <button id="simulate-btn" onclick="simulateMonth()">한 달 시뮬레이션 (데이터 초기화)</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
